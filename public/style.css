@@ -3,7 +3,7 @@
     --hover:#b00;
     --main:#000;
     --bg:#f0f0f0;
-    --scrollColor: #fae9e9b9;
+    --scrollColor: #b3d9ff;
     --size:99vmin;
     --ratio: 1 / 1.1;
     
@@ -49,11 +49,14 @@ header{
     height: 350px;
     top: 230px;
     left: 0px;
-    background: lightgrey;
+    background: #b3d9ff;
     z-index: -1;
 }
 
 .logo {
+    margin-top: 15px;
+    margin-left: 300px;
+    align-self: center;
     width: 247px;
     padding: 10px 0;
     cursor: pointer;
@@ -89,7 +92,7 @@ nav {
 }
 
 nav a:hover {
-    color: green;
+    color: gray;
     cursor: pointer;
 }
 
@@ -98,27 +101,27 @@ nav a:hover {
     text-align: center;
     overflow: hidden;
     font-size: 1rem;
-    text-transform: uppercase;
+    margin-top: -25px;
+    /* text-transform: uppercase; */
     font-weight: bold;
 }
 
 .intro-title {
     color: var(--main);
     font-size: 5rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: bold;
     margin-top: 10vmin;
     margin-bottom: 1vmin;
 
 }
 
-.intro-title p{
-    font-size: 10px;
-}
+/* .intro p{
+    font-size: 12px;
+} */
 
 .intro-subtitle { 
     color: var(--main);
-    font-family: 'Times New Roman';
     font-style: italic;
     font-size: 1rem;
     text-transform: uppercase;
@@ -140,8 +143,8 @@ nav a:hover {
     background-color: rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,0.2);
 
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 200px;
+    margin-bottom: 170px;
 }
 
 .btn:hover {
@@ -246,14 +249,55 @@ section .learnmore2::before {
     transition: 0.5s;
 }
 
+section .learnmore3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 1.5em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+section .learnmore3[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+section .learnmore3[data-scroll="in"]::before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+section .learnmore3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--scrollColor);
+    transform-origin: right;
+    transition: 0.5s;
+}
+
 .learnmore {
+    background-color: white;
     margin-bottom: 500px;
 }
 
 .learnmore1 {
+    text-align: center;
     margin-bottom: 500px;
 }
 
 .learnmore2 {
+    background-color: white;
+    text-align: center;
+    margin-bottom: 500px;
+}
+
+.learnmore3 {
+    text-align: center;
     margin-bottom: 500px;
 }
