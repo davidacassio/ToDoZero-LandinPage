@@ -32,7 +32,7 @@ a {
 header{ 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     font-weight: 900;
     padding: 40px 0;
 }
@@ -55,20 +55,9 @@ header{
 
 .logo {
     margin-top: 15px;
-    margin-left: 300px;
-    align-self: center;
-    width: 247px;
-    padding: 10px 0;
-    cursor: pointer;
-    position: relative;
-    text-align: center;
-    border: 3px solid var(--bg);
-    color: var(--main);
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2.5px;
-    transition: all 0.2s;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100px;
 }
 
 .logo:hover {
